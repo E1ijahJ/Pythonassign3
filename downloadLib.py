@@ -14,7 +14,13 @@ def download_file(url):
 
 
 def seq_download(urls, save_folder="downloads"):
+    """
+    Downloads files sequentially (one after another) from a list of URLs and saves them locally.
     
+    Args:
+        urls (list): List of URL strings.
+        save_folder (str): Folder where downloaded files are saved.
+    """
     if not os.path.exists(save_folder):
         os.makedirs(save_folder)
 
