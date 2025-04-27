@@ -1,3 +1,9 @@
+"""
+Download Time Test:
+- Sequential download time: 1.19 seconds
+- Threaded download time: .32 seconds
+
+"""
 
 
 import sys
