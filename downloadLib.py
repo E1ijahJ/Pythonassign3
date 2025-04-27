@@ -39,7 +39,7 @@ import requests
 import os
 
 def helper_download_file(url, directory="downloads"):
-    
+    """Helper function that downloads a file from a URL and saves it to the specified directory."""
     if not os.path.exists(directory):
         os.makedirs(directory)
 
@@ -54,7 +54,16 @@ def helper_download_file(url, directory="downloads"):
     return local_filename
 
 def threaded_download(urls, directory="downloads"):
-    
+    """
+    Downloads multiple files concurrently using threads. Each download occurs on a separate thread.
+
+    Args:
+        urls (list of str): A list of URLs to download files from.
+        directory (str): The folder where the files will be saved. Defaults to "downloads".
+
+    Returns:
+        None
+    """
     threads = []
 
     for url in urls:
